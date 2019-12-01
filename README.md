@@ -32,3 +32,11 @@ Right-click the VHDX and then mount it. In my case I got the J: as my mounted dr
 The following steps are needed to make your computer boot from the VHDX file:
 + Open an administrative command prompt via WIN+X Command Prompt (Admin)
 + Type bcdboot J:\Windows in order to create the boot files in your .VHDX drive.
+
+9. Save your master image .VHDX file !
+
+At this point you have a master image .VHDX that you could use in different machines/hardware since you still didn’t spin it up, therefore, it still doesn’t have any specific driver related to any hardware. Copy the Windows10_Bootable.vhdx somewhere else so you’d be able to re-use it in multiple machines or in the same machine but for mutiple environments.
+
+10. Change the Boot Loader Description to the boot option’s name you’d like
+
+Type again bcdedit /v, search for the boot loader pointing to the .VHDX and copy its GUID.
