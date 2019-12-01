@@ -21,6 +21,8 @@ Convert-WindowsImage -SourcePath .\fr_windows_10_consumer_editions_version_1903_
 ```
 6. Now, run the script either from Windows PowerShell ISE (with F5) or running it from a plain PowerShell command-line (In both cases with Admin privileges). Be patient, it’ll take a while as it has to copy all the files from the Windows .ISO image to the logical drive based on the .VHDX file that has been created.
 
+![run](https://raw.githubusercontent.com/brahimmachkouri/wim2vhdx/master/run.png)
+
 7. MOUNT the .VHDX as a drive in your machin
 
 Right-click the VHDX and then mount it. In my case I got the J: as my mounted drive.
