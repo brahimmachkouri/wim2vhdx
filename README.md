@@ -39,4 +39,11 @@ At this point you have a master image .VHDX that you could use in different mach
 
 10. Change the Boot Loader Description to the boot option’s name you’d like
 
-Type again bcdedit /v, search for the boot loader pointing to the .VHDX and copy its GUID.
+Type again bcdedit /v, search for the boot loader pointing to the .VHDX and copy its GUID (the "identifier" value).
+![run](https://raw.githubusercontent.com/brahimmachkouri/wim2vhdx/master/id.png)
+Taking that GUID identifier you can change the description in your bootlist by typing something like:
+```powershell
+bcdedit /set "{56658436-b11f-11e9-a184-9d57cd9cd500}" description "Windows 10 Education - VHDX boot"
+```
+Check again with bcdedit /v that the descrption for your new boot loader has changed:
+![run](https://raw.githubusercontent.com/brahimmachkouri/wim2vhdx/master/id2.png)
